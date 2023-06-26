@@ -1,0 +1,21 @@
+body {
+  background-color: azure;
+}
+p{
+  margin: 0;
+}
+section {
+  margin-bottom: 1rem;
+}
+table {
+  caption-side: top;
+}
+#socials {
+  list-style-type: none;
+}
+#socials li {
+  display: inline-block;
+}
+#socials a{
+  color: black;
+}
