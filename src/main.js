@@ -13,8 +13,11 @@ const getVisitorCount = () => {
     .then(response => {
       return response.json();
     }).then(value => {
+      // grab visitor ID part and inject the String
+      const section = document.getElementsByClassName("count");
       const count = value;
-      document.getElementById('counter').innerText = count;
+
+      section.innerHTML = `You are visitor #${count}`;
     });
   }catch(e) {
     console.log('Error communicating with Azure Function to retrieve visitor count');
