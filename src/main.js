@@ -14,13 +14,17 @@ const getVisitorCount = () => {
       return response.json();
     }).then(value => {
       // grab visitor ID part and inject the String
-      const section = document.getElementsByClassName("count");
+      const section = document.querySelector('.count')
       const count = value;
 
       section.innerHTML = `You are visitor #${count}`;
+    }).catch(err => {
+      console.log('Error communicating with Azure Function to retrieve visitor count');
+      document.querySelector('.count').innerHTML = `Error getting visitor number`;
     });
   }catch(e) {
     console.log('Error communicating with Azure Function to retrieve visitor count');
+    document.querySelector('.count').innerHTML = `Error getting visitor number`;
   }
   
   return count;
