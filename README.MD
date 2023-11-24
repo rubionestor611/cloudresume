@@ -1,3 +1,1 @@
-#My Azure Cloud Resume
-
-#
+# Cloud Resume Challenge
